@@ -1,12 +1,50 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a href="/#contact">
-        <figure class="bd-focus-icon has-text-warning">
-            <span class="bd-focus-github icon is-large">
-            <i class="fa fa-3x fa-envelope-open"></i>
-            </span>
-        </figure>
-    </a>
+      <div class="navbar-item">
+
+          <div class="buttons">
+            <a href="/#contact">
+                <figure class="bd-focus-icon has-text-success">
+                <span class="bd-focus-github icon is-large">
+                <i class="fas fa-2x fa-code"></i>
+                </span>
+                </figure>
+            </a>
+            <a href="/#contact">
+                <figure class="bd-focus-icon has-text-info">
+                <span class="bd-focus-github icon is-large">
+                <i class="fas fa-2x fa-plus"></i>
+                </span>
+                </figure>
+            </a>
+            <a href="/#contact">
+                <figure class="bd-focus-icon has-text-black">
+                <span class="bd-focus-github icon is-large">
+                <i class="fas fa-2x fa-coffee"></i>
+                </span>
+                </figure>
+            </a>
+            <a href="/#contact">
+                <figure class="bd-focus-icon has-text-warning">
+                <span class="bd-focus-github icon is-large">
+                <i class="fas fa-2x fa-equals"></i>
+                </span>
+                </figure>
+            </a>
+            <a href="/#contact">
+                <figure class="bd-focus-icon has-text-danger">
+                <span class="bd-focus-github icon is-large">
+                <i class="fab fa-2x fa-hotjar"></i>
+                </span>
+                </figure>
+            </a>
+
+
+
+
+          </div>
+      </div>
+
 
 
 
@@ -165,7 +203,7 @@
                             </h2>
                             <br>
                             <p class="has-text-centered">
-                                <a class="button is-medium is-danger  is-outlined" href="/#prices">
+                                <a class="button is-large is-danger is-active" href="/#prices">
                                     Planes
                                 </a>
                             </p>
@@ -551,30 +589,30 @@
     <div class="plan-header">Básico</div>
     <div class="plan-price">Desde<span class="plan-price-amount"><span class="plan-price-currency">$</span>150.000</span></div>
     <div class="plan-items">
-      <div class="plan-item">Diseño Sencillo</div>
-      <div class="plan-item">Páginas y blogs</div>
+      <div class="plan-item">Diseño <strong>Sencillo</strong></div>
+      <div class="plan-item">Páginas & blogs <strong>Simples</strong> </div>
       <div class="plan-item">Dominio personal</div>
       <div class="plan-item">Email @TuCompañía</div>
     </div>
     <div class="plan-footer">
 
-        <a onclick="copia('Básico')" class="button button is-fullwidth" href="/#forma">
+        <a onclick="copia('Básico')" class="button button is-fullwidth is-active" href="/#forma">
                                     Consulta
         </a>
     </div>
   </div>
 
   <div class="pricing-plan is-active">
-    <div class="plan-header">Pro</div>
+    <div class="plan-header">Profesional</div>
     <div class="plan-price">Desde<span class="plan-price-amount"><span class="plan-price-currency">$</span>600.000</span></div>
     <div class="plan-items">
-      <div class="plan-item">Diseño Personalizado</div>
+      <div class="plan-item">Diseño <strong>Personalizado</strong></div>
       <div class="plan-item">Servicios e-commerce</div>
-      <div class="plan-item">Blogs profesionales</div>
+      <div class="plan-item">Blogs <strong>Profesionales</strong></div>
       <div class="plan-item">Comunidades y Foros</div>
     </div>
     <div class="plan-footer">
-              <a onclick="copia('Pro')" class="button button is-fullwidth" href="/#forma">
+              <a onclick="copia('Profesional')" class="button button is-fullwidth is-active" href="/#forma">
                                     Consulta
         </a>
     </div>
@@ -585,12 +623,12 @@
     <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency"></span>A Medida</span></div>
     <div class="plan-items">
       <div class="plan-item">Diseño Personalizado</div>
-      <div class="plan-item">e-commerce complejos</div>
+      <div class="plan-item">e-commerce <strong>Complejos</strong></div>
       <div class="plan-item">API's</div>
-      <div class="plan-item">Aplicaciónes de celular</div>
+      <div class="plan-item"><strong>Aplicaciones</strong> de celular</div>
     </div>
     <div class="plan-footer">
-              <a onclick="copia('Empresa')" class="button button is-fullwidth" href="/#forma">
+              <a onclick="copia('Empresa')" class="button button is-fullwidth is-active" href="/#forma">
                                     Consulta
         </a>
     </div>
@@ -603,14 +641,14 @@
 
 
  <!-- Contact -->
- <section class="hero is-warning is-bold has-text-centered">
+ <section class="hero is-white-er has-text-centered">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title has-text-custom-one">
+      <h1 class="title is-size-2-desktop is-size-3-mobile has-text-custom-one">
         Contáctanos
       </h1>
-      <h2 class="subtitle has-text-custom-two is-capitalized">
-        Elige tu método preferido
+      <h2 class="subtitle is-size-4-desktop is-size-6-mobile has-text-custom-two">
+        Mensaje, email y teléfono a tu disposición
       </h2>
     </div>
   </div>
@@ -648,11 +686,11 @@
                     </article>
                 </div>
                 <div class="tile is-parent">
-                    <div class="tile is-child box">
-                        <form action="/comment" method="POST">
+                    <div class="tile is-child box has-text-centered">
+                        <form action="/mensaje" method="POST">
                             <div class="section-heading">
                             <h3 class="title is-2 is-capitalized">envíanos  un mensaje</h3>
-                            <h4 class="subtitle is-5">Ponte en contacto</h4>
+                            <h4 class="subtitle is-5">Responderemos a la brevedad</h4>
                             </div>
                             <div id="forma" class="box">
                             <div class="field">
@@ -679,14 +717,16 @@
                             </div>
                             </div>
 
-                            <div class="field is-grouped">
-                            <div class="control">
-                            <button type="submit" class="button is-link is-large is-outlined"><span class="icon has-text-danger">
-                            <i class="fas fa-envelope"></i>
-                            </span>
-                            <span>Enviar</span></button>
-                            </div>
-                            </div>
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <button type="submit" class="button is-link is-large is-danger">
+                                            <span class="icon has-text-warning">
+                                            <i class="fas fa-envelope"></i>
+                                            </span>
+                                            <span>Enviar</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -701,7 +741,7 @@
     <footer class="footer has-background-white ">
         <div class="content has-text-centered has-text-dark ">
 
-            <p>Copyrights © <a target="_blank" href="http://www.ulterweb.com">Ulter Web</a> 2018 | Hecho con <i class="fa fa-heart has-text-danger"></i>
+            <p>Copyrights © <a target="_blank" href="http://www.ulterweb.com">Ulter Web</a> 2018 | Hecho con <i class="fab fa-hotjar has-text-danger"></i></i>
                 por Gonzalo Gutiérrez</p>
         </div>
     </footer>

@@ -16,7 +16,7 @@ require('dotenv').config()
 
 const index = require('./routes/index')
 const admin = require('./routes/admin')
-const comment = require('./routes/comments')
+const mensaje = require('./routes/mensaje')
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true
@@ -52,7 +52,7 @@ app.get('*', (req, res, next) => {
 //aqui los routes
 app.use('/', index)
 app.use('/admin', admin)
-app.use('/comment', comment)
+app.use('/mensaje', mensaje)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

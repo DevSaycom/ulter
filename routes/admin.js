@@ -9,8 +9,11 @@ const adminLoginPostController = require('../controllers/admin/admin.login.POST'
 const adminRegisterGetController = require('../controllers/admin/admin.register.get')
 const adminRegisterPostController = require('../controllers/admin/admin.register.POST')
 
+const mensajesIndexController = require('../controllers/comments/comment.get')
+
 //admin routes
 router.get('/', adminIndexController.admin_index)
+router.get('/mensajes', mensajesIndexController.comments_get)
 
 //login
 router.get('/login', adminLoginGetController.login_get)

@@ -15,12 +15,18 @@ exports.register_POST = (req, res, next) => {
       if (err) {
         console.error(err)
       } else {
-        admin.password = hash
-        admin.save((err) => {
-          if (err) {
-            console.error(err)
+        Admin.find({}, (err, admin) => {
+          if (admin.length <= 0) {
+            admin.password = hash
+            admin.save((err) => {
+              if (err) {
+                console.error(err)
+              } else {
+                res.redirect('/admin/')
+              }
+            })
           } else {
-            res.redirect('/admin/')
+            res.redirect('/admin/login')
           }
         })
       }
