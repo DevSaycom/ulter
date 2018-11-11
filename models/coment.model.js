@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
 
 const commentSchema = mongoose.Schema({
+  date: {
+    type: Date
+  },
   _id: {
     type: mongoose.Schema.Types.ObjectId,
     required: true

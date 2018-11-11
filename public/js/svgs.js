@@ -169,7 +169,6 @@ const conv = function() {
 
 window.addEventListener('scroll', function(event) {
   if(isInViewport(redbub)) {
-    console.log('in view port!')
     counter++
     if (counter > 1) {
       console.log('ya se activo')
@@ -179,7 +178,6 @@ window.addEventListener('scroll', function(event) {
   }
 
   if(isInViewport(anclador)) {
-    console.log('en el view prt tb!')
     counter2++
     if (counter2 > 1) {
       console.log('tb se activo')
@@ -189,7 +187,6 @@ window.addEventListener('scroll', function(event) {
   }
 
   if(isInViewport(cohete)) {
-    console.log('Cohete en view port!')
     counter3++
     if (counter3 > 1) {
       console.log('Cohete ya despegó')

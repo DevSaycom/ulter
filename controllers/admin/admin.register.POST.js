@@ -1,4 +1,5 @@
 const Admin = require('../../models/admin.model')
+const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
 exports.register_POST = (req, res, next) => {
@@ -15,8 +16,8 @@ exports.register_POST = (req, res, next) => {
       if (err) {
         console.error(err)
       } else {
-        Admin.find({}, (err, admin) => {
-          if (admin.length <= 0) {
+        Admin.find({}, (err, result) => {
+          if (result.length <= 0) {
             admin.password = hash
             admin.save((err) => {
               if (err) {

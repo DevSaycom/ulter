@@ -10,10 +10,12 @@ const adminRegisterGetController = require('../controllers/admin/admin.register.
 const adminRegisterPostController = require('../controllers/admin/admin.register.POST')
 
 const mensajesIndexController = require('../controllers/comments/comment.get')
+const singleMensajeController = require('../controllers/comments/comment.single')
 
 //admin routes
-router.get('/', adminIndexController.admin_index)
-router.get('/mensajes', mensajesIndexController.comments_get)
+router.get('/', isAuth, adminIndexController.admin_index)
+router.get('/mensajes', isAuth, mensajesIndexController.comments_get)
+router.get('/mensajes/:_id', isAuth, singleMensajeController.get_single_mensaje)
 
 //login
 router.get('/login', adminLoginGetController.login_get)
