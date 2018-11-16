@@ -13,14 +13,12 @@ exports.comment_POST = (req, res, next) => {
 
 
   let comment = new Comment({
-    _id: mongoose.Types.ObjectId(),
+    _id: new mongoose.Types.ObjectId(),
     name: name,
     email: email,
     body: body,
     date: datestring,
   })
-
-  console.log(datestring)
 
   comment.save((err) => {
     if (err) {

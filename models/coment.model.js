@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const commentSchema = mongoose.Schema({
   date: {
-    type: Date
+    type: String
   },
   _id: {
     type: mongoose.Schema.Types.ObjectId,

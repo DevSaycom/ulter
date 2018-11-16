@@ -12,6 +12,12 @@ const adminRegisterPostController = require('../controllers/admin/admin.register
 const mensajesIndexController = require('../controllers/comments/comment.get')
 const singleMensajeController = require('../controllers/comments/comment.single')
 
+//indice
+const principalGetController = require('../controllers/indice/principal.get')
+const principalPOSTController = require('../controllers/indice/principal.POST')
+const principalEditGetController = require('../controllers/indice/principal.edit.get')
+const principalEditPostController = require('../controllers/indice/pincipal.edit.POST')
+
 //admin routes
 router.get('/', isAuth, adminIndexController.admin_index)
 router.get('/mensajes', isAuth, mensajesIndexController.comments_get)
@@ -24,6 +30,12 @@ router.post('/login', adminLoginPostController.login_POST)
 //register
 router.get('/register', adminRegisterGetController.register_get)
 router.post('/register', adminRegisterPostController.register_POST)
+
+//indice
+router.get('/principal/post', isAuth, principalGetController.indice_get)
+router.get('/principal/edit', isAuth, principalEditGetController.indice_edit)
+router.post('/principal/post', isAuth, principalPOSTController.indice_POST)
+router.post('/principal/edit', isAuth, principalEditPostController.indice_edit_POST)
 
 //aqui van otros. post y weas asi.
 
