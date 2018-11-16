@@ -1,9 +1,10 @@
 const Indice = require('../../models/indice.model')
 
-const id = '5bedfe488efe970570a006dc'
 
 exports.indice_edit_POST = (req, res, next) => {
-  console.log('funciona pero no hace nada parece')
+
+
+
   let indice = {}
   let fecha = new Date()
 
@@ -21,13 +22,16 @@ exports.indice_edit_POST = (req, res, next) => {
   indice.año = fecha.getFullYear()
 
 
-  let query = {_id:id}
 
-  Indice.updateOne(query, indice, (err) => {
-    if (err) {
-      throw err
-    } else {
-      res.redirect('/admin/indice')
-    }
+  Indice.find({}, (err, indi) => {
+    let query = {_id:indi[0]._id}
+
+    Indice.updateOne(query, indice, (err) => {
+      if (err) {
+        throw err
+      } else {
+        res.redirect('/admin/indice')
+      }
+    })
   })
 }
