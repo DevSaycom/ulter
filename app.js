@@ -14,10 +14,13 @@ const session = require('express-session')
 
 require('dotenv').config()
 
+app.use(compression())
+
 const index = require('./routes/index')
 const admin = require('./routes/admin')
 const mensaje = require('./routes/mensaje')
 const gracias = require('./routes/gracias')
+const en = require('./routes/indingles')
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true
@@ -55,6 +58,7 @@ app.use('/', index)
 app.use('/admin', admin)
 app.use('/mensaje', mensaje)
 app.use('/gracias', gracias)
+app.use('/en', en)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,3 +4,8 @@ function copia(opt) {
 
   `
 }
+
+function encopia(opt) {
+  let elem = document.getElementById('txto')
+  elem.innerHTML += `I would like to get extra information about the plan for ${opt} \nMy budget is: \nMy Project have the following characteristics:`
+}

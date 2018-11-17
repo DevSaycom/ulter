@@ -1,9 +1,9 @@
-const Indice = require('../../models/indice.model')
+const Indingles = require('../../models/indingles.model')
 
 exports.indice_get = (req, res, next) => {
-  Indice.find({}, (err, result) => {
+  Indingles.find({}, (err, result) => {
     if(result.length <= 0) {
-      res.render('admin/principal/post', {
+      res.render('admin/principal/indingles/post', {
         title: 'Post New Principal Page'
       })
     } else {
