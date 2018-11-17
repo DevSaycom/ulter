@@ -8,7 +8,7 @@ exports.indice_edit = (req, res, next) => {
       throw err
     } else {
       console.log(indice[0])
-      res.render('admin/principal/edit', {
+      res.render('admin/principal/indingles/edit', {
         title: 'Edita el Indice',
         indice: indice[0]
       })
